@@ -1,4 +1,5 @@
 using System.Collections;
+using System;
 using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
@@ -15,7 +16,7 @@ public class gridManager : MonoBehaviour
 
     public enum CaseType
     {
-        sand  = 2,
+        sand = 2,
         water = 1,
         empty = 0
     };
@@ -39,9 +40,9 @@ public class gridManager : MonoBehaviour
             {1,2,2,2,2,2,2,2}
         };
         // sand=2 water =1 empty=0
-
+        char c = 'c';
         GenerateGrid();
-
+        Console.Write("test");
         cameraP.transform.position = new Vector3((float)width / 2, (float)height / 2, -10);
     }
     public void GenerateGrid()
@@ -83,9 +84,11 @@ public class gridManager : MonoBehaviour
     //GameObject.Destroy(child.gameObject);
 
       // Update is called once per frame
-     void Update()
+     void Propagation()
      {
 
      }
-     }
+    
+
+ }
    
